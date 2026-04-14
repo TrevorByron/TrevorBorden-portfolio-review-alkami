@@ -235,16 +235,20 @@ export default function ProcoreSection() {
                 the real-world experience of our customers.
               </p>
               <p>
-                We did this through discovery calls that I ran, having our customers walk us
-                through their journey, as it existed at that moment, of how they went about looking
-                for new partners and new opportunities.
+                Ultimately we need to understand two fundamental workflows:
+                <br />
+                <br />
+                1. How do companies find other companies to work with?
+                <br />
+                2. How do companies position themselves to increase their chance of being chosen to
+                bid on future projects?
+              </p>
+              <p>
+                Through a series of discovery calls, I had our customers walk us through their
+                journey, as it existed at that moment.
               </p>
               <p>All of these calls were recorded and captured in visuals.</p>
               <p>Unshared research is often wasted research.</p>
-              <p>
-                We paired that with marketplace audits and what we already knew from
-                Procore&apos;s company records—not just vibes from the calls.
-              </p>
               <div className="cs-callout">
                 Who was on the line: I led the calls, with our PM and our lead engineer on every
                 session — design, product, and engineering hearing the same customer, together.
@@ -257,6 +261,12 @@ export default function ProcoreSection() {
             <h3 className="ss-title">Define The High Level</h3>
             <div className="ss-body">
               <p>
+                Much of the complexity that came with the Network was figuring out how it lived
+                between a signed-in and signed-out experience. How might users seamlessly move
+                between the Procore that they worked in daily, and a network where they presented
+                themselves publicly?
+              </p>
+              <p>
                 Together with our PM and lead engineer, we worked at a very high level to map the
                 key journey maps and flows in the Construction Network. The questions in front of
                 us:
@@ -267,7 +277,8 @@ export default function ProcoreSection() {
               </p>
               <p>
                 Those high-level flows were put together with members of Product, UX, and
-                Engineering in the room.
+                Engineering in the room. So much of the experience would depend on technical
+                limitations, and it was important that we consider those from the start.
               </p>
             </div>
           </div>
@@ -277,10 +288,13 @@ export default function ProcoreSection() {
             <h3 className="ss-title">Wireframes</h3>
             <div className="ss-body">
               <p>
-                Before moving to high fidelity, I designed everything in grayscale. Introducing
-                color and polish too early risks shifting the conversation away from what actually
-                matters &mdash; whether the flows and features are right. These wireframes were
-                shared internally for alignment and iterated on based on feedback.
+                With a solid understanding of our users&apos; needs, a grasp on marketplace best
+                practices, and an awareness of the constraints we were faced with technically, I
+                started to design screens. Before moving to high fidelity, I designed everything in
+                grayscale. Introducing color and polish too early risks shifting the conversation
+                away from what actually matters &mdash; whether the flows and features are right.
+                These wireframes were shared internally for alignment and iterated on based on
+                feedback.
               </p>
               <p>
                 The PCN sat between Procore&apos;s marketing site and the core app, which meant the
@@ -556,6 +570,10 @@ export default function ProcoreSection() {
             <h3 className="ss-title">Rapid Iteration</h3>
             <div className="ss-body">
               <p>
+                A massive benefit to having a working prototype before development began was the
+                chance to start testing and iterating immediately.
+                <br />
+                <br />
                 Together with Procore&apos;s research team, we started getting the prototype in
                 front of real customers using a
                 RITE methodology &mdash; Rapid Iterative Testing and Evaluation. The idea is pretty

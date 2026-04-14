@@ -272,7 +272,13 @@ export default function ScoutSection() {
           <p>
             Scout Fuel is a fuel optimization tool for fuel managers at trucking companies. The
             founders have built a UI that is not scaling, and though their customers see value in
-            the concept of fuel optimization, the product has yet to gain traction.
+            the concept of fuel optimization, the product has yet to gain traction. On paper, it
+            makes sense; in practice, they are not leveraging the tool.
+          </p>
+          <p>
+            The founders came to me asking for support. They are new to development, not fully sure
+            of what they needed, but wanted to make sure what they were building felt modern and well
+            thought out.
           </p>
           <p>
             My goal was to create, first, a design foundation from which they could continue to
@@ -478,7 +484,7 @@ export default function ScoutSection() {
 
           <div className="ss-panel" data-img="4" data-caption="Subtractive pass">
             <p className="ss-num">05 - Refine &amp; Build</p>
-            <h3 className="ss-title">Refining with Intention</h3>
+            <h3 className="ss-title">Refining Through Problem Solving Focus</h3>
             <div className="ss-body">
               <p>
                 Once AI put the first version on the canvas, the work shifted to
@@ -494,9 +500,11 @@ export default function ScoutSection() {
                 That phase feels more like carving than layering. Each pass strips away noise so the
                 product gets closer to the rough shape I have in mind.
               </p>
-              <div className="cs-callout">
-                Before adding anything new, remove what the experience can live without.
-              </div>
+              <p>
+                At the core, this stage is about becoming incredibly clear about the problems you
+                are solving, and checking whether you are solving them as directly and as simply as
+                possible.
+              </p>
             </div>
           </div>
 
@@ -506,20 +514,20 @@ export default function ScoutSection() {
             <div className="ss-body">
               <p>
                 After the refinement phase removed distractions and clarified the core shape of the
-                product, I started adding new features focused on engagement so the experience
-                wasn&apos;t just a system of record.
-                <br />
-                <br />
-                I introduced a dynamic
-                <strong> efficiency score </strong>
-                based on each trucking company&apos;s purchase history; the score moved up or down
-                with fleet driver execution and became a prominent dashboard signal for quickly
-                identifying which drivers needed attention. The goal was to bring a grounded sense
-                of <strong>gamification</strong> into the workflow.
+                product, I started adding new features for all user problems that seemed poorly
+                addressed.
               </p>
               <p>
-                That sequencing matters. Gamification without structure reads as desperation.
-                Structure without warmth reads as software that doesn&apos;t respect long shifts.
+                In this case I focused on simplifying the ability to see, at a glance, how your
+                fleet was doing holistically and which of your drivers might need additional
+                coaching.
+              </p>
+              <p>
+                I introduced a dynamic <strong>efficiency score</strong> based on each trucking
+                company&apos;s purchase history; the score moved up or down with fleet driver
+                execution and became a prominent dashboard signal for quickly identifying which
+                drivers needed attention. The goal was to bring a grounded sense of{' '}
+                <strong>gamification</strong> into the workflow.
               </p>
             </div>
           </div>
@@ -528,6 +536,14 @@ export default function ScoutSection() {
             <p className="ss-num">07 - Documentaion</p>
             <h3 className="ss-title">Leveraging Skills for Documentation</h3>
             <div className="ss-body">
+              <p>
+                I will admit that documentation is not something that really gets me excited and is
+                often an area where I&apos;ll drag my feet.
+              </p>
+              <p>
+                This is changing dramatically as I&apos;ve started leveraging new workflows into my
+                process.
+              </p>
               <p>
                 In the repo I added a <strong>Cursor skill</strong> that summarizes every pull
                 request and appends to that Notion doc. I told the agent to write in{' '}
