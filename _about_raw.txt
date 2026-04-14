@@ -1,0 +1,100 @@
+                                          ║
+     ╚══════════════════════════════════════════════════════════╝ -->
+<div id="page-about" class="page">
+
+  <div class="page-hero">
+    <p class="label a1">About</p>
+    <h2 class="page-headline a2">American. Raised in East Africa and Portugal. Builder by nature.</h2>
+    <p class="page-lede a3">A cross-cultural upbringing, a second-born's instinct for reading the room, and a career spent building things — that's what shaped the way I design.</p>
+  </div>
+
+  <!-- Sticky scroll: image LEFT, text RIGHT -->
+  <div class="scroll-section" id="about-scroll">
+
+    <div class="ss-image-col">
+      <div class="ss-image-wrap">
+        <div class="ss-img active" data-index="0">
+          <img src="ABOUT_PHOTO" alt="" />
+        </div>
+        <div class="ss-img" data-index="1">
+          <img src="ABOUT_PHOTO" alt="" />
+        </div>
+        <div class="ss-img" data-index="2">
+          <img src="ABOUT_PHOTO" alt="" />
+        </div>
+        <div class="ss-caption" id="about-cap">East Africa</div>
+        <div class="ss-progress">
+          <span class="ss-dot active"></span>
+          <span class="ss-dot"></span>
+          <span class="ss-dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ss-text-col">
+      <div class="ss-panel" data-img="0" data-caption="East Africa">
+        <p class="ss-num">01 &mdash; Empathy</p>
+        <h3 class="ss-title">Born reading the room.</h3>
+        <div class="ss-body">
+          <p>I'm American, but I grew up in <strong>East Africa and Portugal</strong>. Navigating cultures, languages, and unspoken social rules from an early age trained me to read subtext — the gap between what people say and what they mean.</p>
+          <p>Being a second-born accelerated that further. Younger siblings learn fast: read cues early, anticipate before being asked, adapt before the room shifts. <strong>That instinct never left.</strong> It just moved into my design practice.</p>
+        </div>
+      </div>
+
+      <div class="ss-panel" data-img="1" data-caption="With friends in Africa">
+        <p class="ss-num">02 &mdash; Activator</p>
+        <h3 class="ss-title">I'd rather build it than plan it.</h3>
+        <div class="ss-body">
+          <p>My top Gallup strength is <strong>Activator</strong> — a bias toward action over discussion. I've been a carpenter, a mechanic, always hands-on. I like to make things exist that didn't before.</p>
+          <p>Since my first UI/UX role at Iodine in 2017, I've approached design the same way: <strong>build to think, not think to build.</strong> Prototypes over decks. Code over comps. Get it in front of people.</p>
+        </div>
+      </div>
+
+      <div class="ss-panel" data-img="2" data-caption="The designer I am today">
+        <p class="ss-num">03 &mdash; The Designer</p>
+        <h3 class="ss-title">Empathy + Activation. That's the combination.</h3>
+        <div class="ss-body">
+          <p>Deep empathy tells me what to build. The Activator gets it built. Together they've defined my entire career — from construction sites to construction software, from carpentry to component libraries.</p>
+          <div class="cs-callout">
+            "I don't design to hand off. I design to ship."
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="traits-wrap">
+    <p class="label">What informs the work</p>
+    <p class="traits-hed">Three things that don't show up in a resume.</p>
+    <div class="traits-grid">
+      <div class="trait">
+        <p class="trait-num">01</p>
+        <p class="trait-title">Cross-cultural fluency</p>
+        <p class="trait-body">East Africa. Portugal. U.S. Three social frameworks before adulthood. I find the shared signal beneath different worldviews — in users, in stakeholders, in data.</p>
+      </div>
+      <div class="trait">
+        <p class="trait-num">02</p>
+        <p class="trait-title">Activator</p>
+        <p class="trait-body">Top Gallup StrengthsFinder theme. Carpenter. Mechanic. Prototype-first designer. I move from idea to artifact faster than most. That speed is a feature, not a risk.</p>
+      </div>
+      <div class="trait">
+        <p class="trait-num">03</p>
+        <p class="trait-title">Builder's mentality</p>
+        <p class="trait-body">Since 2017 I've treated design as a construction discipline. The best way to know if something works is to build it. Every role I've taken has proven that out.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-footer">
+    <p class="label" style="margin-bottom:16px;">This portfolio</p>
+    <p>Each piece was curated for this conversation with Alkami — selected to speak directly to the Data &amp; Marketing design challenge: zero-to-one product launches, complex data environments, and the systems thinking this role demands.</p>
+    <div class="tags" style="gap:12px;">
+      <button class="btn" onclick="go('procore')">Procore Case Study &rarr;</button>
+      <button class="btn" onclick="go('scout')">Scout Fuel &rarr;</button>
+    </div>
+  </div>
+
+</div>
+
+
