@@ -45,7 +45,25 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body>{children}</body>
+      <body>
+        <div className="desktop-only-shell">{children}</div>
+        <main className="mobile-splash" aria-label="Desktop required message">
+          <div className="mobile-splash-brand">
+            <p className="mobile-splash-for">For:</p>
+            <img className="mobile-splash-logo" src="/Alkami_Logo_GRAD_RGB.svg" alt="Alkami logo" />
+          </div>
+          <div className="mobile-splash-inner">
+            <p className="mobile-splash-kicker">Desktop Experience</p>
+            <h1 className="mobile-splash-title">
+              This site is meant to be enjoyed on desktop.
+              <br />
+              <br />
+              Please open the link again on desktop to continue.
+            </h1>
+            <p className="mobile-splash-meta">Trevor Borden Portfolio Review - 2026</p>
+          </div>
+        </main>
+      </body>
     </html>
   );
 }

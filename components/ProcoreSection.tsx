@@ -31,7 +31,13 @@ export default function ProcoreSection() {
           obs.disconnect();
         }
       },
-      { root: null, rootMargin: '0px', threshold: 0 }
+      {
+        root: null,
+        // Wait until the prototype section is meaningfully in view before mounting iframe
+        // work. Mounting at first-pixel intersection can feel like a jump during panel 05.
+        rootMargin: '0px 0px -20% 0px',
+        threshold: 0.2,
+      }
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -504,7 +510,7 @@ export default function ProcoreSection() {
                   <span className="bf-dot bf-yellow" />
                   <span className="bf-dot bf-green" />
                 </div>
-                <div className="bf-urlbar">PCN prototype</div>
+                <div className="bf-urlbar">Embedded Prototype, explore as you wish</div>
               </div>
               <div className="bf-screen bf-screen--media bf-screen--iframe">
                 {prototypeIframeSrc ? (

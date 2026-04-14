@@ -11,12 +11,6 @@ export default function AboutSection() {
         <h2 className="page-headline a2">
           A little about me
         </h2>
-        <p className="page-lede a3">
-          Born in Kenya to an American family, raised in the bush, with high school in Portugal —
-          I&apos;m the second of four kids. I built my first website in 2005 for a band I was in,
-          spent years as a carpenter and remodeler, then moved into UI/UX in 2017. Today I&apos;m an
-          Activator and the founder of Tiger Team Studios.
-        </p>
       </div>
 
       <div className="scroll-section" id="about-scroll">

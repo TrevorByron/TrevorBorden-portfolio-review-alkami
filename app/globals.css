@@ -46,6 +46,75 @@
       overflow-x: visible;
     }
 
+.desktop-only-shell {
+  display: block;
+}
+
+.mobile-splash {
+  display: none;
+  min-height: 100svh;
+  width: 100%;
+}
+
+.mobile-splash-brand {
+  width: min(560px, calc(100% - 56px));
+  margin: 0 auto 16px;
+}
+
+.mobile-splash-for {
+  margin: 0 0 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(252, 251, 247, 0.8);
+}
+
+.mobile-splash-logo {
+  height: 22px;
+  width: auto;
+  display: block;
+}
+
+.mobile-splash-inner {
+  width: min(560px, calc(100% - 56px));
+  margin: 0 auto;
+  padding: 36px 26px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 211, 74, 0.26);
+  background:
+    radial-gradient(circle at 15% 5%, rgba(255, 211, 74, 0.2) 0%, rgba(255, 211, 74, 0.02) 45%, transparent 80%),
+    rgba(19, 18, 13, 0.64);
+  box-shadow:
+    0 26px 52px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.mobile-splash-kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 211, 74, 0.9);
+  margin-bottom: 14px;
+}
+
+.mobile-splash-title {
+  margin: 0;
+  font-size: clamp(22px, 7.8vw, 34px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #fcfbf7;
+}
+
+.mobile-splash-meta {
+  margin-top: 16px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(252, 251, 247, 0.72);
+}
+
     /* ─── Utilities ──────────────────────────────────────────── */
     .container { max-width: var(--w); margin: 0 auto; padding: 0 var(--gx); }
     .label {
@@ -1366,6 +1435,24 @@
     }
     /* ─── Responsive ─────────────────────────────────────────── */
     @media (max-width: 860px) {
+  body {
+    min-height: 100svh;
+    background:
+      radial-gradient(circle at 22% 0%, rgba(255, 211, 74, 0.22), transparent 48%),
+      linear-gradient(180deg, #15140f 0%, #0f0e0a 62%, #0c0b08 100%);
+    color: #fcfbf7;
+    overflow-x: hidden;
+  }
+  .desktop-only-shell {
+    display: none;
+  }
+  .mobile-splash {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 28px 0;
+  }
       :root { --gx: 24px; }
       #procore-scroll.scroll-section.img-right {
         --procore-scroll-pad-mobile: max(var(--gx), calc((100vw - var(--w)) / 2));
