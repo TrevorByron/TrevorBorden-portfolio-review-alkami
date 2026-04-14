@@ -432,8 +432,8 @@
       text-align: left;
       cursor: pointer;
     }
-    .bf-card--paper { z-index: 2; }
-    .bf-card--video { z-index: 1; }
+    .bf-card--paper { z-index: 1; }
+    .bf-card--video { z-index: 2; }
     .bf-card:focus-visible {
       z-index: 3;
       outline: 2px solid var(--accent-deep);
