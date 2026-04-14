@@ -6,8 +6,8 @@ import { useEffect, useRef, useState } from 'react';
 const PCN_VISION_DOC_URL =
   'https://www.dropbox.com/scl/fi/2aw86rl0p1ud73yec3ptd/What-we-talk-about-when-we-talk-about-the-PCN-January-Prototype-here.paper?rlkey=5kl3kcviibvwmd6cw6sptgbvu&dl=0';
 
-const PCN_VISION_VIDEO_URL =
-  'https://www.dropbox.com/scl/fi/5ne1ptyl8p74dbn6buzqv/Buyer-Final.mov?rlkey=ot4kw28vmqd5c0alev9eybh6w&st=zm4uubh7&dl=0';
+const PCN_VISION_VIDEO_MP4_SRC = '/procore/video/vision-video.mp4';
+const PCN_VISION_VIDEO_MOV_SRC = '/procore/video/vision-video.mov';
 
 /** Set true after adding `public/procore-pcn-vision-video-poster.png`. */
 const VISION_VIDEO_HAS_POSTER = false;
@@ -20,6 +20,7 @@ const PCN_BUILD_ILLUSTRATION_SRC = '/procore/build.png';
 export default function ProcoreSection() {
   const protoShowcaseRef = useRef<HTMLElement | null>(null);
   const [prototypeIframeSrc, setPrototypeIframeSrc] = useState<string | null>(null);
+  const [isVisionVideoOpen, setIsVisionVideoOpen] = useState(false);
 
   useEffect(() => {
     const el = protoShowcaseRef.current;
@@ -42,6 +43,22 @@ export default function ProcoreSection() {
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
+
+  useEffect(() => {
+    if (!isVisionVideoOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsVisionVideoOpen(false);
+      }
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isVisionVideoOpen]);
 
   return (
     <div id="page-procore" className="page active">
@@ -126,6 +143,7 @@ export default function ProcoreSection() {
                 Starting with discover, then low-fidelity flows and concepts and moving towards more
                 robust and refined prototypes.
                 <br />
+                <br />
                 Below, I&apos;ll walk you through that process and highlight how
                 the steps impacted the final outcome and success of the Procore Construction
                 Network.
@@ -153,9 +171,10 @@ export default function ProcoreSection() {
             <div className="ss-body">
               <p>
                 At the start of the project, I was aware that there had been a few other attempts
-                before my time to get a construction network off the ground. One of my goals early on
-                was to simultaneously drive alignment and excitement internally within the org to keep
-                the project funded.
+                before my time to get a construction network off the ground. It was my intent to keep
+                momentum up as the project was kicked off. One of my goals early on was to
+                simultaneously drive alignment and excitement internally within the organization to keep
+                the project funded and moving forward.
               </p>
               <p>
                 I did this through rigorous documentation and making promo videos of what the
@@ -174,14 +193,13 @@ export default function ProcoreSection() {
                   Internal Strategy Document
                 </a>
                 {' · '}
-                <a
-                  href={PCN_VISION_VIDEO_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-link"
+                <button
+                  type="button"
+                  className="inline-link inline-link-button"
+                  onClick={() => setIsVisionVideoOpen(true)}
                 >
                   Vision video
-                </a>
+                </button>
               </p>
             </div>
           </div>
@@ -311,12 +329,11 @@ export default function ProcoreSection() {
                       </div>
                     </div>
                   </a>
-                  <a
-                    href={PCN_VISION_VIDEO_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
                     className="bf-card bf-card--video"
-                    aria-label="Open vision video in Dropbox"
+                    aria-label="Open vision video in modal"
+                    onClick={() => setIsVisionVideoOpen(true)}
                   >
                     <div className="browser-frame browser-frame--deck">
                       <div className="bf-chrome">
@@ -344,7 +361,7 @@ export default function ProcoreSection() {
                         )}
                       </div>
                     </div>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -717,6 +734,38 @@ export default function ProcoreSection() {
           <span className="tag">Front-end Implementation</span>
         </div>
       </div>
+      {isVisionVideoOpen ? (
+        <div
+          className="video-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Procore vision video"
+          onClick={() => setIsVisionVideoOpen(false)}
+        >
+          <div className="video-modal-panel" onClick={(event) => event.stopPropagation()}>
+            <button
+              type="button"
+              className="video-modal-close"
+              onClick={() => setIsVisionVideoOpen(false)}
+              aria-label="Close vision video"
+            >
+              Close
+            </button>
+            <video
+              className="video-modal-player"
+              controls
+              autoPlay
+              playsInline
+              preload="metadata"
+              poster="/procore/vision-video-poster.png"
+            >
+              <source src={PCN_VISION_VIDEO_MP4_SRC} type="video/mp4" />
+              <source src={PCN_VISION_VIDEO_MOV_SRC} type="video/quicktime" />
+              Your browser does not support the vision video format.
+            </video>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }

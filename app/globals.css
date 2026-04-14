@@ -425,6 +425,13 @@
         box-shadow 0.42s ease;
       -webkit-tap-highlight-color: transparent;
     }
+    button.bf-card {
+      background: none;
+      border: 0;
+      padding: 0;
+      text-align: left;
+      cursor: pointer;
+    }
     .bf-card--paper { z-index: 2; }
     .bf-card--video { z-index: 1; }
     .bf-card:focus-visible {
@@ -514,6 +521,56 @@
     }
     .bf-screen--video-poster .bf-video-label {
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55), 0 0 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .video-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.68);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .video-modal-panel {
+      width: min(1040px, 100%);
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(18, 18, 16, 0.96);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+      padding: 16px;
+    }
+    .video-modal-close {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.06);
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 13px;
+      padding: 0 14px;
+      margin-bottom: 12px;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .video-modal-close:hover {
+      background: rgba(255, 211, 74, 0.16);
+      border-color: rgba(255, 211, 74, 0.72);
+    }
+    .video-modal-close:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    .video-modal-player {
+      width: 100%;
+      max-height: min(78vh, 760px);
+      border-radius: 10px;
+      background: #000;
+      display: block;
     }
 
     /* Procore: near full-viewport showcase rows (wireframes GIF + iframe prototype) */
@@ -1413,15 +1470,24 @@
     }
     .cs-meta-value { font-size: 14px; font-weight: 500; }
     .cs-meta-value .cs-meta-link,
-    a.inline-link {
+    a.inline-link,
+    .inline-link-button {
       color: var(--ink);
       text-decoration: underline;
       text-decoration-color: var(--ink-35);
       text-underline-offset: 3px;
       transition: color 0.15s, text-decoration-color 0.15s;
     }
+    .inline-link-button {
+      background: none;
+      border: 0;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+    }
     .cs-meta-value .cs-meta-link:hover,
-    a.inline-link:hover {
+    a.inline-link:hover,
+    .inline-link-button:hover {
       color: var(--accent-deep);
       text-decoration-color: var(--accent-deep);
     }

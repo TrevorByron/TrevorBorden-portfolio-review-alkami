@@ -58,7 +58,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               This site is meant to be enjoyed on desktop.
               <br />
               <br />
-              Please open the link again on desktop to continue.
+              Please open the link on desktop to continue.
             </h1>
             <p className="mobile-splash-meta">Trevor Borden Portfolio Review - 2026</p>
           </div>
