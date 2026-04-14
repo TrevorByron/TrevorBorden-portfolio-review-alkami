@@ -78,7 +78,7 @@ export default function ProcoreSection() {
           </div>
           <div className="cs-meta-item">
             <span className="cs-meta-label">Design Timeline</span>
-            <span className="cs-meta-value">7 Months</span>
+            <span className="cs-meta-value">10 months</span>
           </div>
           <div className="cs-meta-item">
             <span className="cs-meta-label">Scope</span>
