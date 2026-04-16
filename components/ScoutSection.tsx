@@ -302,11 +302,11 @@ export default function ScoutSection() {
           </div>
           <div className="cs-meta-item">
             <span className="cs-meta-label">Stack</span>
-            <span className="cs-meta-value">Shadcn &middot; Tailwind &middot; Cursor</span>
+            <span className="cs-meta-value">Next.js &middot; Tailwind CSS &middot; shadcn/ui &middot; Vercel</span>
           </div>
           <div className="cs-meta-item">
             <span className="cs-meta-label">Tools</span>
-            <span className="cs-meta-value">Claude &middot; Tweak CN</span>
+            <span className="cs-meta-value">Claude &middot; Tweak CN &middot; Cursor</span>
           </div>
         </div>
         <div className="cs-hero-bleed" role="img" aria-label="Before and after browser-framed Scout Fuel dashboard redesign comparison.">
@@ -380,12 +380,22 @@ export default function ScoutSection() {
                 before we invested in polish.
               </p>
               <p>
-                In today&apos;s process, design is much more powerful in the refining stage.{' '}
-                <strong>Taste, judgment, and instinct</strong> become some of the most important
-                skills because of how easy generating and creating has become. Our job is much more
-                about removing noise and distraction and really honing in on the simplest, most
-                beautiful experience for our users. In the past, design process was a slow,
-                additive process. Today, it is often a much more subtractive process.
+                In today&apos;s process, I believe design is about{' '}
+                <strong>steeping and soaking</strong> in the problem and the problem space — so
+                that <strong>solutioning</strong> can feel almost instinctual, with tools like{' '}
+                <strong>Claude</strong> and <strong>Cursor</strong> handling so much of the
+                generative work.
+              </p>
+              <p>
+                Design is now more of a <strong>subtractive</strong> refinement process: we{' '}
+                <strong>strip away noise and distraction</strong> until the simplest path through
+                the problem is clear. <strong>Taste and judgment</strong> become two of our most
+                important <strong>superpowers</strong>.
+              </p>
+              <p>
+                In the past, design was a slow <strong>additive</strong> process. Today, once you
+                are steeped in the problem and the user, it is often much more{' '}
+                <strong>subtractive</strong>.
               </p>
               <p>
                 I leveraged this in a recent project for Scout Fuel. The results and timeline
