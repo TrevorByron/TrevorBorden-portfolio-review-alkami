@@ -270,7 +270,7 @@ export default function ScoutSection() {
         </h2>
         <div className="page-lede-stack a3">
           <p>
-            Scout Fuel is a fuel optimization tool for fuel managers at trucking companies. The
+            Scout Fuel is a fuel optimization tool for trucking companies. The
             founders have built a UI that is not scaling, and though their customers see value in
             the concept of fuel optimization, the product has yet to gain traction. On paper, it
             makes sense; in practice, they are not leveraging the tool.
